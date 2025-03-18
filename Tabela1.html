@@ -1,0 +1,97 @@
+<html lang="br-pt">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela-1</title>
+    <link rel="stylesheet" href="Tabela1.css">
+    <link rel="shortcut icon" href="Imagens/cbf.png" type="image/x-icon">
+    <script src="script.js"></script>
+    
+  </head>
+  
+  <h1> Tabela Times </h1>
+
+  <body>
+      <button type="button" onclick= "horaAtual()">Data e Hora</button> 
+
+      <button type="button" onclick= "mudarCor()" >cor das linhas</button> 
+      <button type="button" onclick= "voltarCor()" >voltar para a padão</button> 
+
+      <button type="button" onclick="tamanhoLetra()">tamanho da letra</button> 
+
+
+      <p id="date"></p>
+    
+    
+    <table>
+        <tr id="tab" class="tab">
+            
+
+          <th> <b> Imagem </b> </th>
+          <th> <b> Posição </b> </th>
+          <th> <b> Time </b> </th>
+          <th> <b> Pontos </b> </th>
+          <th> <b> Qtd. Jogos </b> </th>
+          <th> <b> Qtd. Vitorias </b> </th>
+          <th> <b> Qtd. Derrotas </b> </th>
+
+        </tr>
+
+        <tr id="primeiro" class="primeiro" onmouseover="passarEmCima('primeiro')"; onmouseout="tirarMouse('primeiro')">
+          
+          <td> <a href="https://www.google.com/search?client=opera-gx&q=bota+fogo&sourceid=opera&ie=UT
+            F-8&oe=UTF-8#cobssid=s"> <img src= "Imagens/BFI.jpg" > </href> </a>  </td>
+          <td> <u> 1 </u> </td>
+          <td> <a href="https://www.botafogo.com.br"> Botafogo </href> </a> </td>
+          <td> <i> 79 </i> </td>
+          <td> 10 </td>
+          <td> 9 </td>
+          <td> 1 </td>
+
+        </tr>
+
+        <tr id="segundo" class="segundo" onmouseover="passarEmCima('segundo')"; onmouseout="tirarMouse('segundo')">
+          <td> <a href="https://www.google.com/search?q=palmeiras&client=opera-gx&hs=WWL&sca_esv=b3202a
+            6c776f9b4f&sxsrf=AHTn8zqNJRxq8USRiJrP1U_0PDwYM3lP4g%3A1740256309670&ei=NTS6Z_PSKL3e1sQPhPe2
+            wAM&ved=0ahUKEwizwZ_5j9iLAxU9r5UCHYS7DTgQ4dUDCBA&uact=5&oq=palmeiras&gs_lp=Egxnd3Mtd2l6LXNl
+            cnAiCXBhbG1laXJhczIPECMYgAQYJxiKBRhGGP0BMg0QLhiABBixAxhDGIoFMggQABiABBixAzIIEAAYgAQYsQMyBRA
+            uGIAEMgoQABiABBhDGIoFMgoQABiABBhDGIoFMhAQABiABBixAxhDGIMBGIoFMg4QABiABBixAxiDARiKBTINEAAYgA
+            QYsQMYFBiHAjIZEAAYgAQYigUYRhj9ARiXBRiMBRjdBNgBAUjiGlCMEVjuGXAFeAGQAQCYAXmgAaMHqgEDMC44uAEDy
+            AEA-AEBmAINoAKaCMICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIOEAAYsAMY5AIY1gTYAQHCAhMQLhiABBiw
+            AxhDGMgDGIoF2AEBwgIKECMYgAQYJxiKBcICBBAjGCfCAgoQLhiABBhDGIoFwgIcEC4YgAQYsQMYQxiKBRiXBRjcBBj
+            eBBjgBNgBAcICCxAuGIAEGLEDGIMBwgINEAAYgAQYsQMYQxiKBcICChAAGIAEGBQYhwKYAwDiAwUSATEgQIgGAZAGE7
+            oGBggBEAEYCZIHAzUuOKAHr2k&sclient=gws-wiz-serp"> <img src= "Imagens/PI.png"  > </href> </a> </td>
+          <td> <u> 2 </u> </td>
+          <td> <a href="https://www.palmeiras.com.br"> Palmeiras </href> </a> </td>
+          <td> <i> 73 </i> </td>
+          <td> 10 </td>
+          <td> 8 </td>
+          <td> 2 </td>
+        </tr>
+
+        <tr id="terceiro" class="terceiro" onmouseover="passarEmCima('terceiro')"; onmouseout="tirarMouse('terceiro')">
+          <td> <a href="https://www.google.com/search?q=flamengo&client=opera-gx&hs=oYL&sca_esv=b3202a6c
+            776f9b4f&sxsrf=AHTn8zpMi5fH3NwC919o-peg_0j43pHMJQ%3A1740256452002&ei=wzS6Z_fyPI3P1sQP3LbZmA
+            k&ved=0ahUKEwi34I69kNiLAxWNp5UCHVxbFpMQ4dUDCBA&uact=5&oq=flamengo&gs_lp=Egxnd3Mtd2l6LXNlcnA
+            iCGZsYW1lbmdvMg8QIxiABBgnGIoFGEYY_QEyEBAuGIAEGLEDGIMBGBQYhwIyChAAGIAEGEMYigUyChAAGIAEGEMYig
+            UyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyDRAAGIAEGLEDGEMYigUyChAAG
+            IAEGEMYigUyGRAAGIAEGIoFGEYY_QEYlwUYjAUY3QTYAQFI1xFQhQhYrxBwAngBkAEAmAF5oAGKB6oBAzAuOLgBA8gB
+            APgBAZgCCqAC1QfCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICDhAAGLADGOQCGNYE2AEBwgITEC4YgAQYsAM
+            YQxjIAxiKBdgBAcICChAjGIAEGCcYigXCAhAQLhiABBixAxhDGIMBGIoFwgINEC4YgAQYsQMYQxiKBcICChAuGIAEGE
+            MYigXCAh8QLhiABBixAxhDGIMBGIoFGJcFGNwEGN4EGOAE2AEBwgINEAAYgAQYsQMYFBiHAsICChAAGIAEGBQYhwLCA
+            ggQABiABBixA8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigWYAwCIBgGQBhO6BgYIARABGAmSBwMyLjigB7Ne
+            &sclient=gws-wiz-serp"> <img src= "Imagens/FI.png" > </href> </a>  </td> 
+          <td> <u> 3 </u> </td>
+          <td> <a href="https://www.flamengo.com.br"> Flamengo </href> </a> </td>
+          <td> <i> 70 </i> </td>
+          <td> 10 </td>
+          <td> 7 </td>
+          <td> 3 </td>
+        </tr>
+
+    </table>
+       
+  </body>
+
+</html>
