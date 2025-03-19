@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificação do Campeonato Brasileiro 2024</title>
+  <style>
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 10px;
+          text-align: left;
+          border: 1px solid #ddd;
+      }
+      .primeira-linha {
+          background-color: #f0ad4e; /* Cor de fundo inicial para a primeira linha */
+      }
+  </style>
+</head>
+<body>
+
+<h1>Classificação do Campeonato Brasileiro 2024</h1>
+<table>
+    <tr>
+        <th>Imagem</th>
+        <th>Posição</th>
+        <th>Time</th>
+        <th>Pontos</th>
+        <th>Qtd. Jogos</th>
+        <th>Qtd. Vitórias</th>
+        <th>Qtd. Derrotas</th>
+    </tr>
+    <tr class="primeira-linha" id="primeira-linha">
+        <td><img src="data:image/jpeg;base64,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" alt="Botafogo" width="30"></td>
+        <td>1</td>
+        <td><a href="https://www.botafogo.com.br" target="_blank">Botafogo</a></td>
+        <td>79</td>
+        <td>10</td>
+        <td>9</td>
+        <td>1</td>
+    </tr>
+    <tr class="time">
+        <td><img src="https://th.bing.com/th/id/OIP.G_Ebcqx31tdx0rNlbMFkaAHaHk?w=180&h=185&c=7&r=0&o=5&pid=1.7" alt="Palmeiras" width="30"></td>
+        <td>2</td>
+        <td><a href="https://www.palmeiras.com.br" target="_blank">Palmeiras</a></td>
+        <td>73</td>
+        <td>10</td>
+        <td>8</td>
+        <td>2</td>
+    </tr>
+    <tr class="time">
+        <td><img src="https://th.bing.com/th/id/OIP.x_hYrc9cb1zZf0sqJjzVsQHaI0?rs=1&pid=ImgDetMain" alt="Flamengo" width="30"></td>
+        <td>3</td>
+        <td><a href="https://www.flamengo.com.br" target="_blank">Flamengo</a></td>
+        <td>70</td>
+        <td>10</td>
+        <td>7</td>
+        <td>3</td>
+    </tr>
+</table>
+
+<!-- Botões com funções -->
+<div>
+    <button type="button" class="btn btn-success" onclick="mudarCorPrimeiraLinha()">Mudar Cor da Primeira Linha</button>
+    <button type="button" class="btn btn-danger" onclick="resetarCorPrimeiraLinha()">Resetar Cor da Primeira Linha</button>
+    
+    <button type="button" class="btn btn-bold" onclick="mudarFonteNegrito()">Mudar Fonte para Negrito</button>
+    <button type="button" class="btn btn-light" onclick="resetarFonte()">Resetar Fonte</button>
+    
+    <button type="button" class="btn btn-primary" onclick="mudarCorTime()">Mudar Cor dos Outros Times</button>
+    <button type="button" class="btn btn-light" onclick="resetarCorTime()">Resetar Cor dos Outros Times</button>
+</div>
+
+<script>
+    // Mudar cor da primeira linha para verde
+    function mudarCorPrimeiraLinha() {
+        document.getElementById('primeira-linha').style.backgroundColor = 'green';
+    }
+
+    // Resetar cor da primeira linha para original
+    function resetarCorPrimeiraLinha() {
+        document.getElementById('primeira-linha').style.backgroundColor = '#f0ad4e'; // Cor original
+    }
+
+    // Mudar fonte da primeira linha e dos outros times para negrito
+    function mudarFonteNegrito() {
+        let primeiraLinha = document.getElementById('primeira-linha');
+        primeiraLinha.style.fontWeight = 'bold';
+        
+        let times = document.querySelectorAll('.time');
+        times.forEach(function(time) {
+            time.style.fontWeight = 'bold';
+        });
+    }
+
+    // Resetar fonte para normal
+    function resetarFonte() {
+        document.getElementById('primeira-linha').style.fontWeight = 'normal';
+
+        let times = document.querySelectorAll('.time');
+        times.forEach(function(time) {
+            time.style.fontWeight = 'normal';
+        });
+    }
+    
+    // Mudar cor dos times para azul
+    function mudarCorTime() {
+        let times = document.querySelectorAll('.time');
+        times.forEach(function(time) {
+            time.style.color = 'blue';
+        });
+    }
+
+    // Resetar cor dos outros times para original
+    function resetarCorTime() {
+        let times = document.querySelectorAll('.time');
+        times.forEach(function(time) {
+            time.style.color = 'black'; // Cor original
+        });
+    }
+</script>
+
+</body>
+</html>
