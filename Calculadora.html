@@ -1,0 +1,36 @@
+
+<input type="number" id="valor1"> -- indicando valor --
+<input type="number" id="valor2">
+<select id="operador">
+    <option value="add">+</option>
+    <option value="subtract">-</option>
+    <option value="multiply">*</option>
+    <option value="divide">/</option>
+</select>
+<button onclick="calcular()">Calcular</button>
+<p id="resultado"></p>
+
+<script>
+function calcular() {
+    var valor1 = parseFloat(document.getElementById('valor1').value);
+    var valor2 = parseFloat(document.getElementById('valor2').value);
+    var operador = document.getElementById('operador').value;
+    var resultado;
+
+    switch (operador) {
+        case 'add':
+            resultado = valor1 + valor2;
+            break;
+        case 'subtract':
+            resultado = valor1 - valor2;
+            break;
+        case 'multiply':
+            resultado = valor1 * valor2;
+            break;
+        case 'divide':
+            resultado = valor1 / valor2;
+            break;
+    }
+    document.getElementById('resultado').innerText = "Resultado: " + resultado;
+}
+</script>
